@@ -1,0 +1,23 @@
+{
+  "host": "10.142.0.2",
+  "http_ports": [
+    5050,
+    8282
+  ],
+  "server_ip": "10.142.0.2",
+  "game_port": 9933,
+  "server_id": 1,
+  "files_folder": "Files",
+  "content_url": "",
+  "force_empty_manifest": true,
+  "cors_origins": [
+    "*"
+  ],
+  "cors_credentials": false,
+  "token_ttl": 900,
+  "auth_ttl": 1200,
+  "login_ttl": 7200,
+  "log_level": "info",
+  "token_key": "b892443b45b167fa",
+  "token_iv": "99e30a95347724d3"
+}

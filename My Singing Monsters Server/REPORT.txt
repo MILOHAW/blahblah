@@ -1,0 +1,64 @@
+NPS server check - 2026-08-18 18:41:31
+running from: D:\ZewicMsMPc\ServerData\My Singing Monsters Server
+server folder: D:\ZewicMsMPc\ServerData\My Singing Monsters Server
+
+====================================================================
+1. IS THE SAVE FIX INSTALLED?
+====================================================================
+   [OK ] per-account saving                 (msm_handlers.py)
+   [OK ] atomic save writes                 (msm_store.py)
+   [OK ] no snapshot restore on disconnect  (bridge_core.py)
+
+====================================================================
+2. PLAYER SAVES
+====================================================================
+saves folder: D:\ZewicMsMPc\ServerData\My Singing Monsters Server\SFS2X\extensions\MSM\players
+   [save]  IslandTestUser.json            1 KB  islands=1   monsters=0    structures=0    eggs=0
+   [save]  Nextstars (2).json           445 KB  islands=27  monsters=0    structures=0    eggs=0
+   [save]  Nextstars.json               214 KB  islands=27  monsters=1    structures=0    eggs=0
+
+====================================================================
+3. STALE SESSION SNAPSHOTS
+====================================================================
+   none found - good
+
+====================================================================
+4. DOES THE SAVE CONTENT LOOK LIKE REAL SERVER DATA?
+====================================================================
+reference: 177_gs_player.json
+           705 monsters, 1111 structures - a genuine official-server capture
+
+   --- IslandTestUser.json ---
+   1 islands, but nothing on them.
+   If he has been playing, progress is not reaching disk - send the server log.
+   monsters    none in this save
+   structures  none in this save
+   eggs        none in this save
+
+   --- Nextstars (2).json ---
+   27 islands, but nothing on them.
+   If he has been playing, progress is not reaching disk - send the server log.
+   monsters    none in this save
+   structures  none in this save
+   eggs        none in this save
+
+   --- Nextstars.json ---
+   monsters    1 records
+       looks fine
+       full contents of these 1 record(s):
+         {"book_value": 250, "costume": {"eq": 0, "p": []}, "flip": 0, "happiness": 0, "in_hotel": 0, "island": 1349082214, "last_collection": 1787071267209, "last_feeding": 1787071267209, "level": 20, "monster": 4, "muted": 0, "name": "ToeJammer", "pos_x": 20, "pos_y": 19, "times_fed": 0, "user_monster_id": 21979, "volume": 1.0}
+       for comparison, a real one:
+         {"box_requirements": "[1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,31]", "boxed_eggs": "[5]", "costume": {"eq": 0, "p": []}, "flip": 0, "happiness": 0, "in_hotel": 0, "island": 165868066, "last_collection": 1603947390230, "last_feeding": 1603947390230, "level": 17, "megamonster": {"currently_mega": false, "permamega": true}, "monster": 35, "muted": 0, "name": "Zyphur", "parent_island": 165866918, "parent_monster": 609, "pos_x": 26, "pos_y": 17, "times_fed": 0, "user_monster_id": 704, "volume": {"__double_bits": "0x3ff0000000000000"}}
+   structures  none in this save
+   eggs        none in this save
+
+====================================================================
+WHAT WAS CHANGED
+====================================================================
+   nothing needed moving
+
+====================================================================
+NEXT STEP
+====================================================================
+   Start the server, log in, and see if it still crashes at 97 percent.
+   If it does, send REPORT.txt (next to this script) plus the server log.
