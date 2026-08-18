@@ -1,10 +1,11 @@
 {
-  "host": "10.142.0.2",
+  "host": "0.0.0.0",
   "http_ports": [
     5050,
     8282
   ],
-  "server_ip": "10.142.0.2",
+  "server_ip": "35.185.20.231",
+  "content_port": 5050,
   "game_port": 9933,
   "server_id": 1,
   "files_folder": "Files",
