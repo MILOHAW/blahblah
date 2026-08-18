@@ -896,8 +896,10 @@ async def main():
     _SHUTDOWN_REQUESTED = False
     _tasks = []
     _UVICORN_SERVERS.clear()
-    host = str(SETTINGS.get('host', '26.101.222.10'))
+    # Server binds to this address (0.0.0.0 = all interfaces, localhost = loopback only)
+    host = str(SETTINGS.get('host', '0.0.0.0'))
     log_level = str(SETTINGS.get('log_level', 'info')).lower()
+    logger.info('Server binding to %s', host)
     for _b in SETTINGS.get('http_ports') or [80]:
         _tasks.append(_serve_with_retry(host, int(_b), log_level))
     watchdog = asyncio.ensure_future(_force_exit_watchdog())
